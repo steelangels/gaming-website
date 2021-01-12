@@ -10453,7 +10453,8 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .black:not(.has-background) .section-background {
-    background-color: #0a0a0a
+    background-color: #05386b;
+    /* 0a0a0a */
 }
 
 .black h1 {
