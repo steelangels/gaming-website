@@ -6149,7 +6149,7 @@ body.sqs-lightbox-open {
 }
 
 .product-block .productDetails .product-quantity-input input {
-    background-color: #fff;
+    /*background-color: #fff;*/
     color: #222
 }
 
@@ -8752,7 +8752,8 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
@@ -23916,10 +23917,7 @@ body {
     color: #000
 }
 
-.page-section {
-    background-color: #fff
-}
-
+=
 p a {
     color: #000
 }
@@ -23944,14 +23942,6 @@ div.sqs-block-opentable-v2 h1 {
 
 .page-section {
     color: #000
-}
-
-.page-section.background-width--inset {
-    background-color: #fff
-}
-
-:not(.has-background) .section-background {
-    background-color: #fff
 }
 
 h1 {
@@ -24156,15 +24146,6 @@ body.primary-button-style-outline .newsletter-form-button {
     color: #000
 }
 
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .image-button a::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .sqs-add-to-cart-button::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .sqs-editable-button:not(input)::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .sqs-block-button-element::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid [data-animation-role="header-element"] .btn::before {
-    border-color: #000;
-    background-color: #fff
-}
-
 .no-touch .tweak-global-animations-animation-type-flex.primary-button-style-outline .image-button a:hover,
 .no-touch .tweak-global-animations-animation-type-flex.primary-button-style-outline .sqs-add-to-cart-button:hover,
 .no-touch .tweak-global-animations-animation-type-flex.primary-button-style-outline .sqs-editable-button:not(input):hover,
@@ -24185,10 +24166,6 @@ body.primary-button-style-outline .newsletter-form-button {
 
 .sqs-block-horizontalrule hr {
     background-color: #000
-}
-
-.section-background-overlay {
-    background-color: #fff
 }
 
 .floating-cart {
@@ -24217,7 +24194,7 @@ body.primary-button-style-outline .newsletter-form-button {
 }
 
 body[data-menu-overlay-theme-switcher="true"] .header {
-    background-color: #fff
+    /*background-color: #fff;*/
 }
 
 body[data-menu-overlay-theme-switcher="true"]:not(.header--menu-open) .header-title-text a {
@@ -25105,7 +25082,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .products.collection-content-wrapper .grid-item.on-sale .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .products.collection-content-wrapper .grid-item.on-sale .original-price .sqs-money-native {
@@ -25113,7 +25090,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .products.collection-content-wrapper .product-mark.sale {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .products.collection-content-wrapper .list-pagination .product-list-pagination-icon svg {
@@ -25170,7 +25147,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .products.collection-content-wrapper .grid-main-meta .grid-meta-status {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .products.collection-content-wrapper .product-scarcity {
@@ -25178,7 +25155,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .ProductItem.on-sale .ProductItem-details .product-price .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .ProductItem .ProductItem-details {
@@ -25199,7 +25176,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .ProductItem .ProductItem-details .product-scarcity {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .ProductItem .ProductItem-details .variant-option,
@@ -29061,7 +29038,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .on-sale .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .on-sale .original-price .sqs-money-native {
@@ -29069,7 +29046,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .on-sale .product-price .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .original-price {
@@ -29079,7 +29056,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 
 .product-mark.sale {
     display: none;
-    color: #0ee4fb
+    color: #05386b
 }
 
 .product-restock-notification:not([hidden]) {
