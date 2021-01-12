@@ -1,68 +1,826 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Steel Angels</title>
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"
+    data-authenticated-account>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>You are viewing the placeholder for this site</h1>
-      <p>This site is currently in development, and hopefully will be live soon.</p>
-      <a target="_blank" href="index2.html">Preview The Site</a>
-    </div>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-      });
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This is Squarespace. -->
+    <!-- gecko-carillon-e6x7 -->
+    <base href="">
+    <meta charset="utf-8" />
+    <title>SteelANGELS Gaming</title>
+    <link rel="shortcut icon" type="image/x-icon"
+        href="static/img/ico.jpg" />
+    <link rel="canonical" href="https://steelangels.ga" />
+    <meta property="og:site_name" content="SteelANGELS Gaming" />
+    <meta property="og:title" content="SteelANGELS Gaming" />
+    <meta property="og:url" content="https://steelangels.ga" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+        content="static/img/og_image.png" />
+    <meta property="og:image:width" content="571" />
+    <meta property="og:image:height" content="277" />
+    <meta itemprop="name" content="SteelANGELS Gaming" />
+    <meta itemprop="url" content="https://steelangels.ga" />
+    <meta itemprop="thumbnailUrl"
+        content="static/img/og_image.png" />
+    <link rel="image_src"
+        href="static/img/og_image.png" />
+    <meta itemprop="image"
+        content="static/img/og_image.png" />
+    <meta name="twitter:title" content="SteelANGELS Gaming" />
+    <meta name="twitter:image"
+        content="static/img/og_image.png" />
+    <meta name="twitter:url" content="https://steelangels.ga" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="description" content="" />
+    <!--<link rel="preconnect" href="https://images.squarespace-cdn.com">-->
+    <script type="text/javascript"
+        src="//use.typekit.net/ik/gI3b-TkuG8G4IFYaoi5vie-TCfCoudYN910yRVJaFFIfe76IfFHN4UJLFRbh52jhWDmcZQSajDJow248jQbDFRb3jcwoZeF8wUnUMKG0jAFu-WsoShFGZAsude80ZkoRdhXCHKoyjamTiY8Djhy8ZYmC-Ao1Oco8if37OcBDOcu8OfG0ZhmR-hvljhBk-AUCdhtlZQZtFkoDSWmyScmDSeBRZPoRdhXCHKoDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOeBRiA8XpWFR-emqiAUTdcS0jhNlOeBRiA8XpWFR-emqiAUTdcS0dcmXOeBDOcu8Oei8jhlzOAFySc8CdeN0OA9hp2S0SaBujW48Sagyjh90jhNlOeUzjhBC-eNDifUDSWmyScmDSeBRZWFR-emqiAUTdcS0jhNlOYiaikoyjamTiY8Djhy8ZYmC-Ao1OcFzdPUaiaS0jAFu-WsoShFGZAsude80Zko0ZWbCiaiaOcBDOcu8OYiaiko1ZAFndkuRjW4TdeUzdKu8F16aO1FUiABkZWF3jAF8OcFzdPUaiaS0SaBujW48SagyjhmDjhy8ZYmC-Ao1OcFzdPJF-A4lOWgCZW6ldAN0dkJOjAs8deU8OWFyd1w7f6Kvl3JbMg6IJMJ7f6Krl3JbMg6BJMJ7f6Rfl3JbMg6YJMJ7f6KNl3JbMg65JMJ7f6R2l3JbMg6sJMJ7f6RhyMIbMs62JMJ7f6RzyMIbMs6YJMJ7f6RayMIbMs6FJMJ7f6R3yMIbMs6sJMHbMS2BhLvB.js">
     </script>
-  </body>
+    <script type="text/javascript">
+        try {
+            Typekit.load();
+        } catch (e) {}
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,700i,400i" />
+    <script type="text/javascript">
+        SQUARESPACE_ROLLUPS = {};
+    </script>
+    <script>
+        (function (rollups, name) {
+            if (!rollups[name]) {
+                rollups[name] = {};
+            }
+            rollups[name].js = [
+                "//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-d2b6094e965c882c2de89-min.en-US.js"
+            ];
+        })(SQUARESPACE_ROLLUPS, 'squarespace-cldr_resource_pack');
+    </script>
+    <!--<script crossorigin="anonymous"
+        src="//assets.squarespace.com/universal/scripts-compressed/cldr-resource-pack-d2b6094e965c882c2de89-min.en-US.js"
+        defer></script>
+    <script>
+        (function (rollups, name) {
+            if (!rollups[name]) {
+                rollups[name] = {};
+            }
+            rollups[name].js = [
+                "//assets.squarespace.com/universal/scripts-compressed/common-vendors-2ec094db00b9e6d92d8fd-min.en-US.js"
+            ];
+        })(SQUARESPACE_ROLLUPS, 'squarespace-common_vendors');
+    </script>
+    <script crossorigin="anonymous"
+        src="//assets.squarespace.com/universal/scripts-compressed/common-vendors-2ec094db00b9e6d92d8fd-min.en-US.js"
+        defer></script>
+    <script>
+        (function (rollups, name) {
+            if (!rollups[name]) {
+                rollups[name] = {};
+            }
+            rollups[name].js = [
+                "//assets.squarespace.com/universal/scripts-compressed/common-2c32d110777189549ff4d-min.en-US.js"
+            ];
+        })(SQUARESPACE_ROLLUPS, 'squarespace-common');
+    </script>
+    <script crossorigin="anonymous"
+        src="//assets.squarespace.com/universal/scripts-compressed/common-2c32d110777189549ff4d-min.en-US.js" defer>
+    </script>
+    <script>
+        (function (rollups, name) {
+            if (!rollups[name]) {
+                rollups[name] = {};
+            }
+            rollups[name].js = [
+                "//assets.squarespace.com/universal/scripts-compressed/commerce-29ceb73d72817ae44cf08-min.en-US.js"
+            ];
+        })(SQUARESPACE_ROLLUPS, 'squarespace-commerce');
+    </script>
+    <script crossorigin="anonymous"
+        src="//assets.squarespace.com/universal/scripts-compressed/commerce-29ceb73d72817ae44cf08-min.en-US.js" defer>
+    </script>
+    <script>
+        (function (rollups, name) {
+            if (!rollups[name]) {
+                rollups[name] = {};
+            }
+            rollups[name].css = [
+                "//assets.squarespace.com/universal/styles-compressed/commerce-c6a9de0bd3119cb26a512448db40c590-min.en-US.css"
+            ];
+        })(SQUARESPACE_ROLLUPS, 'squarespace-commerce');
+    </script>-->
+    <link rel="stylesheet" type="text/css"
+        href="//assets.squarespace.com/universal/styles-compressed/commerce-c6a9de0bd3119cb26a512448db40c590-min.en-US.css">
+    <script type="application/ld+json">
+        {
+            "url": "https://steelangels.ga",
+            "name": "SteelAngels Gaming",
+            "description": "",
+            "image": "https://steelangerls.ga/static/img/ico.jpg",
+            "@context": "http://schema.org",
+            "@type": "WebSite"
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="static/css/secondary.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/master.css" />
+    <!-- End of Squarespace Headers -->
+    <style type="text/css">
+    html, body, main {
+        background-color: #4abe80;/* 5cd895 */
+    }
+    p, h4, h3, h2, h1 {
+        color: #edf5e1 !important;/* indianred edf5e1 05386b */
+    }
+    header, .btn {
+        color: #edf5e1 !important;
+    }
+    #x-center-overview {
+        display: flex;
+    }
+    .fai {
+        color: #edf5e1;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    @media screen and (max-width: 910px) {
+        #x-center-overview {
+            display: block;
+        }
+        #x-center-overview img {
+            width: 100%;
+        }
+    }
+    </style>
+    <script src="https://kit.fontawesome.com/925f6dce39.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="collection-5fe78e4048c30047e628dc5a" class="tweak-products-width-full tweak-products-image-aspect-ratio-11-square tweak-products-text-alignment-middle tweak-products-price-show tweak-products-nested-category-type-top tweak-products-header-text-alignment-middle tweak-products-breadcrumbs tweak-blog-alternating-side-by-side-width-full tweak-blog-alternating-side-by-side-image-aspect-ratio-11-square tweak-blog-alternating-side-by-side-text-alignment-left tweak-blog-alternating-side-by-side-read-more-style-show tweak-blog-alternating-side-by-side-image-text-alignment-middle tweak-blog-alternating-side-by-side-delimiter-bullet tweak-blog-alternating-side-by-side-meta-position-top tweak-blog-alternating-side-by-side-primary-meta-categories tweak-blog-alternating-side-by-side-secondary-meta-date tweak-blog-alternating-side-by-side-excerpt-show tweak-global-animations-enabled tweak-global-animations-complexity-level-detailed tweak-global-animations-animation-style-fade tweak-global-animations-animation-type-scale tweak-global-animations-animation-curve-ease tweak-blog-masonry-width-full tweak-blog-masonry-text-alignment-left tweak-blog-masonry-primary-meta-categories tweak-blog-masonry-secondary-meta-date tweak-blog-masonry-meta-position-top tweak-blog-masonry-read-more-style-show tweak-blog-masonry-delimiter-pipe tweak-blog-masonry-image-placement-above tweak-blog-masonry-excerpt-hide tweak-portfolio-grid-overlay-width-full tweak-portfolio-grid-overlay-height-large tweak-portfolio-grid-overlay-image-aspect-ratio-11-square tweak-portfolio-grid-overlay-text-placement-center tweak-portfolio-grid-overlay-show-text-after-hover image-block-poster-text-alignment-center image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-content-position-center image-block-collage-text-alignment-left image-block-stack-text-alignment-left tweak-portfolio-slides-cover-detail-placement-horizontal-left tweak-portfolio-slides-cover-detail-placement-vertical-middle tweak-portfolio-slides-cover-text-align-left tweak-portfolio-slides-cover-content-width-m tweak-portfolio-slides-cover-indicator-type-bar tweak-portfolio-slides-cover-view-link tweak-portfolio-slides-cover-animation-style-vertical-slide tweak-portfolio-slides-inset-detail-placement-middle-left tweak-portfolio-slides-inset-image-margin-m tweak-portfolio-slides-inset-content-width-m tweak-portfolio-slides-inset-indicator-type-bar tweak-portfolio-slides-inset-view-link tweak-portfolio-slides-inset-animation-style-vertical-slide tweak-portfolio-slides-split-position-split-left tweak-portfolio-slides-split-text-align-left tweak-portfolio-slides-split-detail-placement-horizontal-left tweak-portfolio-slides-split-detail-placement-vertical-middle tweak-portfolio-slides-split-image-align-right tweak-portfolio-slides-split-image-width-m tweak-portfolio-slides-split-content-width-m tweak-portfolio-slides-split-indicator-type-bar tweak-portfolio-slides-split-view-link tweak-portfolio-slides-split-animation-style-vertical-slide tweak-blog-single-column-width-full tweak-blog-single-column-text-alignment-center tweak-blog-single-column-image-placement-above tweak-blog-single-column-delimiter-bullet tweak-blog-single-column-read-more-style-show tweak-blog-single-column-primary-meta-date tweak-blog-single-column-secondary-meta-categories tweak-blog-single-column-meta-position-top tweak-blog-single-column-content-title-only tweak-product-basic-item-width-full tweak-product-basic-item-gallery-aspect-ratio-11-square tweak-product-basic-item-text-alignment-left tweak-product-basic-item-navigation-none tweak-product-basic-item-content-alignment-top tweak-product-basic-item-gallery-design-stacked tweak-product-basic-item-gallery-placement-left tweak-product-basic-item-thumbnail-placement-side tweak-product-basic-item-click-action-none tweak-product-basic-item-hover-action-none tweak-product-basic-item-variant-picker-layout-dropdowns header-width-inset tweak-fixed-header tweak-fixed-header-style-scroll-back tweak-blog-item-width-wide tweak-blog-item-text-alignment-center tweak-blog-item-meta-position-above-title tweak-blog-item-delimiter-bullet primary-button-style-outline primary-button-shape-square tweak-blog-side-by-side-width-full tweak-blog-side-by-side-image-placement-left tweak-blog-side-by-side-image-aspect-ratio-11-square tweak-blog-side-by-side-primary-meta-categories tweak-blog-side-by-side-secondary-meta-date tweak-blog-side-by-side-meta-position-top tweak-blog-side-by-side-text-alignment-left tweak-blog-side-by-side-image-text-alignment-middle tweak-blog-side-by-side-read-more-style-show tweak-blog-side-by-side-delimiter-bullet tweak-blog-side-by-side-excerpt-show tweak-events-stacked-width-full tweak-events-stacked-height-small tweak-events-stacked-show-past-events tweak-events-stacked-show-thumbnails tweak-events-stacked-thumbnail-size-32-standard tweak-events-stacked-date-style-side-tag tweak-events-stacked-show-time tweak-blog-basic-grid-width-full tweak-blog-basic-grid-image-aspect-ratio-32-standard tweak-blog-basic-grid-text-alignment-center tweak-blog-basic-grid-delimiter-pipe tweak-blog-basic-grid-image-placement-above tweak-blog-basic-grid-read-more-style-show tweak-blog-basic-grid-primary-meta-date tweak-blog-basic-grid-secondary-meta-categories tweak-blog-basic-grid-excerpt-hide tweak-portfolio-grid-basic-width-full tweak-portfolio-grid-basic-height-large tweak-portfolio-grid-basic-image-aspect-ratio-11-square tweak-portfolio-grid-basic-text-alignment-left tweak-portfolio-grid-basic-hover-effect-fade header-overlay-alignment-center tweak-portfolio-index-background-link-format-stacked tweak-portfolio-index-background-width-full tweak-portfolio-index-background-height-large tweak-portfolio-index-background-vertical-alignment-middle tweak-portfolio-index-background-horizontal-alignment-center tweak-portfolio-index-background-animation-type-fade tweak-portfolio-index-background-animation-duration-medium tweak-portfolio-hover-follow-layout-inline tweak-portfolio-hover-follow-delimiter-bullet tweak-portfolio-hover-follow-animation-type-fade tweak-portfolio-hover-follow-animation-duration-fast tweak-portfolio-hover-static-layout-inline tweak-portfolio-hover-static-front tweak-portfolio-hover-static-delimiter-hyphen tweak-portfolio-hover-static-animation-type-fade tweak-portfolio-hover-static-animation-duration-fast hide-opentable-icons opentable-style-dark tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-5fe78e4048c30047e628dc5a collection-type-page collection-layout-default homepage mobile-style-available sqs-seven-one" tabindex="-1">
+    <div id="siteWrapper" class="clearfix site-wrapper">
+        <div class="floating-cart hidden" data-controller="FloatingCart">
+            <a href="#/cart" class="icon icon--stroke icon--cart sqs-custom-cart">
+                <span class="Cart-inner">
+                    <svg class="icon icon--cart" viewBox="0 0 31 26"><g class="svg-icon cart-icon--odd"><circle stroke-miterlimit="10" cx="22.5" cy="21.5" r="1" /><circle stroke-miterlimit="10" cx="9.5" cy="21.5" r="1" /><path fill="none" stroke-miterlimit="10" d="M0,1.5h5c0.6,0,1.1,0.4,1.1,1l1.7,13 c0.1,0.5,0.6,1,1.1,1h15c0.5,0,1.2-0.4,1.4-0.9l3.3-8.1c0.2-0.5-0.1-0.9-0.6-0.9H12" /></g></svg>
+                    <div class="icon-cart-quantity">
+                        <span class="sqs-cart-quantity">0</span>
+                    </div>
+                </span>
+            </a>
+        </div>
+        <header data-test="header" id="header" class='bright-inverse header theme-col--primary' tabindex="-1">
+            <div class="sqs-announcement-bar-dropzone"></div>
+            <div class="header-announcement-bar-wrapper"> <a href="#page" tabindex="1" class="header-skip-link">Skip to Content</a>
+                <div
+                    class='header-inner container--fluid header-mobile-layout-logo-left-nav-right header-layout-branding-center '>
+                    <!-- Background -->
+                    <div class="header-background theme-bg--primary"></div>
+                    <div class="header-display-desktop" data-content-field="site-title">
+                        <!-- Social -->
+                        <!-- Title and nav wrapper -->
+                        <div class="header-title-nav-wrapper">
+                            <!-- Nav -->
+                            <div class="header-nav">
+                                <div class="header-nav-wrapper">
+                                    <nav class="header-nav-list">
+                                        <div
+                                            class="header-nav-item header-nav-item--collection header-nav-item--active header-nav-item--homepage">
+                                            <a href="/" data-animation-role="header-element"><span class="visually-hidden">Current Page: </span>Home</a></div>
+                                        <div class="header-nav-item header-nav-item--folder">
+                                            <a class="header-nav-folder-title" href="#/explore" tabindex="-1">Explore</a>
+                                            <div class="header-nav-folder-content">
+                                                <div class="header-nav-folder-item"> <a href="#/about-us-1">About us</a></div>
+                                                <div class="header-nav-folder-item"> <a href="#/social-links">Social Links</a></div>
+                                                <div class="header-nav-folder-item"> <a href="#/apply-for-clan">Apply for clan</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="header-nav-item header-nav-item--collection">
+                                            <a href="#/merch">Merch</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div> <!-- Title -->
+                            <div class=" header-title header-title--use-mobile-logo "
+                                data-animation-role="header-element">
+                                <div class="header-title-logo"> <a href="/" data-animation-role="header-element"> <img
+                                            src="static/img/og_image_trans.png"
+                                            alt="SteelANGELS Gaming" /> </a> </div>
+                                <div class="header-mobile-logo"> <a href="/" data-animation-role="header-element"> <img
+                                            src="static/img/og_image_trans.png"
+                                            alt="SteelANGELS Gaming" /> </a> </div>
+                            </div>
+                        </div> <!-- Actions -->
+                        <div class="header-actions header-actions--right">
+                            <div class="header-actions-action header-actions-action--social" id="fa-container">
+                                <a class="icon icon--fill" href="https://discord.com/invite/7rGMw45mZv" target="_blank" aria-label="URL">
+                                    <!--<svg viewBox="23 23 64 64"><use xlink:href="#url-icon" width="110" height="110"></use></svg>-->
+                                    <i class="fai fab fa-discord"></i>
+                                </a>
+                                <a class="icon icon--fill" href="https://twitter.com/steelangelstm?s=09" target="_blank" aria-label="">
+                                    <!--<svg viewBox="23 23 64 64"><use xlink:href="#twitter-unauth-icon" width="110" height="110"></use></svg>-->
+                                    <i class="fai fab fa-twitter"></i>
+                                </a>
+                                <a class="icon icon--fill" href="https://www.youtube.com/channel/UCvlHPCDMWFA_L_LWETpnPOQ" target="_blank" aria-label="YouTube">
+                                    <!--<svg viewBox="23 23 64 64"><use xlink:href="#youtube-unauth-icon" width="110" height="110"></use></svg>-->
+                                    <i class="fai fab fa-youtube"></i>
+                                </a>
+                                <a class="icon icon--fill" href="https://www.instagram.com/steelangelsgaming/?r=nametag" target="_blank" aria-label="">
+                                    <!--<svg viewBox="23 23 64 64"><use xlink:href="#instagram-unauth-icon" width="110" height="110"></use></svg>-->
+                                    <i class="fai fab fa-instagram"></i>
+                                </a>
+                                <a class="icon icon--fill" href="https://www.facebook.com/steel.angels.353" target="_blank" aria-label="Facebook">
+                                    <!--<svg viewBox="23 23 64 64"><use xlink:href="#facebook-unauth-icon" width="110" height="110"></use></svg>-->
+                                    <i class="fai fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                            <div class="showOnMobile"></div>
+                            <div class="showOnDesktop"></div>
+                            <!-- Right-hand apply button -->
+                            <div class="header-actions-action header-actions-action--cta">
+                                <a class="btn btn--border theme-btn--primary-inverse" href="#/apply-for-clan" onclick="alert('This feature is currently not available')">Apply for clan</a>
+                            </div>
+                        </div>
+                        <!-- Burger -->
+                        <div class="header-burger " data-animation-role="header-element">
+                            <button class="header-burger-btn burger" data-test="header-burger">
+                                <span hidden class="js-header-burger-open-title visually-hidden">Open Menu</span>
+                                <span hidden class="js-header-burger-close-title visually-hidden">Close Menu</span>
+                                <div class="burger-box">
+                                    <div class="burger-inner header-menu-icon-tripleLineHamburger ">
+                                        <div class="top-bun"></div>
+                                        <div class="patty"></div>
+                                        <div class="bottom-bun"></div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header-display-mobile" data-content-field="site-title">
+                        <!-- Social -->
+                        <!-- Title and nav wrapper -->
+                        <div class="header-title-nav-wrapper">
+                            <!-- Nav -->
+                            <div class="header-nav">
+                                <div class="header-nav-wrapper">
+                                    <nav class="header-nav-list">
+                                        <div
+                                            class="header-nav-item header-nav-item--collection header-nav-item--active header-nav-item--homepage">
+                                            <a href="/" data-animation-role="header-element"> <span
+                                                    class="visually-hidden">Current Page:</span> Home </a> </div>
+                                        <div class="header-nav-item header-nav-item--folder"> <a class="header-nav-folder-title" href="#/explore" tabindex="-1">Explore</a>
+                                            <div class="header-nav-folder-content">
+                                                <div class="header-nav-folder-item"> <a href="#/about-us-1">About us</a></div>
+                                                <div class="header-nav-folder-item"> <a href="#/social-links">Social Links</a></div>
+                                                <div class="header-nav-folder-item"> <a href="#/apply-for-clan">Apply for clan</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="header-nav-item header-nav-item--collection"> <a href="#/merch"> Merch </a> </div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- Title -->
+                            <div class=" header-title header-title--use-mobile-logo">
+                                <div class="header-title-logo">
+                                    <a href="/" data-animation-role="header-element"><img src="static/img/og_image_trans.png" alt="SteelANGELS Gaming"></a>
+                                </div>
+                                <div class="header-mobile-logo">
+                                    <a href="/" data-animation-role="header-element">
+                                    <img src="static/img/og_image_trans.png" alt="SteelANGELS Gaming"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Actions -->
+                        <div class="header-actions header-actions--right">
+                            <div class="header-actions-action header-actions-action--social"> <a class="icon icon--fill"
+                                    href="https://www.youtube.com/channel/UCvlHPCDMWFA_L_LWETpnPOQ" target="_blank"
+                                    aria-label="YouTube"> <svg viewBox="23 23 64 64">
+                                        <use xlink:href="#youtube-unauth-icon" width="110" height="110"></use>
+                                    </svg> </a> <a class="icon icon--fill"
+                                    href="https://www.instagram.com/steelangelsgaming/?r=nametag" target="_blank"
+                                    aria-label=""> <svg viewBox="23 23 64 64">
+                                        <use xlink:href="#instagram-unauth-icon" width="110" height="110"></use>
+                                    </svg> </a> <a class="icon icon--fill" href="https://twitter.com/steelangelstm?s=09"
+                                    target="_blank" aria-label=""> <svg viewBox="23 23 64 64">
+                                        <use xlink:href="#twitter-unauth-icon" width="110" height="110"></use>
+                                    </svg> </a> <a class="icon icon--fill" href="https://discord.com/invite/7rGMw45mZv"
+                                    target="_blank" aria-label="URL"> <svg viewBox="23 23 64 64">
+                                        <use xlink:href="#url-icon" width="110" height="110"></use>
+                                    </svg> </a> <a class="icon icon--fill"
+                                    href="https://www.facebook.com/steel.angels.353" target="_blank"
+                                    aria-label="Facebook"> <svg viewBox="23 23 64 64">
+                                        <use xlink:href="#facebook-unauth-icon" width="110" height="110"></use>
+                                    </svg> </a> </div>
+                            <div class="showOnMobile"></div>
+                            <div class="showOnDesktop"></div>
+                            <div class="header-actions-action header-actions-action--cta">
+                                <a class="btn btn--border theme-btn--primary-inverse" href="#/apply-for-clan">Apply for clan</a>
+                            </div>
+                        </div>
+                        <!-- Burger -->
+                        <div class="header-burger " data-animation-role="header-element">
+                            <button class="header-burger-btn burger" data-test="header-burger">
+                                <span hidden class="js-header-burger-open-title visually-hidden">Open Menu</span>
+                                <span hidden class="js-header-burger-close-title visually-hidden">Close Menu</span>
+                                <div class="burger-box">
+                                    <div class="burger-inner header-menu-icon-tripleLineHamburger ">
+                                        <div class="top-bun"></div>
+                                        <div class="patty"></div>
+                                        <div class="bottom-bun"></div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- (Mobile) Menu Navigation -->
+            <div class="header-menu header-menu--folder-list black-bold">
+                <div class="header-menu-nav">
+                    <nav class="header-menu-nav-list">
+                        <div data-folder="root" class="header-menu-nav-folder">
+                            <!-- Menu Navigation -->
+                            <div class="header-menu-nav-folder-content">
+                                <div class="container header-menu-nav-item header-menu-nav-item--collection header-menu-nav-item--active header-menu-nav-item--homepage">
+                                    <a href="/"><span class="visually-hidden">Current Page:</span> Home </a>
+                                </div>
+                            </div>
+                            <div class="header-menu-actions">
+                                <div class="header-menu-actions-action header-menu-actions-action--social"> <a
+                                        class="icon icon--lg icon--fill"
+                                        href="https://www.youtube.com/channel/UCvlHPCDMWFA_L_LWETpnPOQ" target="_blank"
+                                        aria-label="YouTube"> <svg viewBox="23 23 64 64">
+                                            <use xlink:href="#youtube-unauth-icon" width="110" height="110"></use>
+                                        </svg> </a> </div>
+                                <div class="header-menu-actions-action header-menu-actions-action--social"> <a
+                                        class="icon icon--lg icon--fill"
+                                        href="https://www.instagram.com/steelangelsgaming/?r=nametag" target="_blank"
+                                        aria-label=""> <svg viewBox="23 23 64 64">
+                                            <use xlink:href="#instagram-unauth-icon" width="110" height="110"></use>
+                                        </svg> </a> </div>
+                                <div class="header-menu-actions-action header-menu-actions-action--social"> <a
+                                        class="icon icon--lg icon--fill" href="https://twitter.com/steelangelstm?s=09"
+                                        target="_blank" aria-label=""> <svg viewBox="23 23 64 64">
+                                            <use xlink:href="#twitter-unauth-icon" width="110" height="110"></use>
+                                        </svg> </a> </div>
+                                <div class="header-menu-actions-action header-menu-actions-action--social"> <a
+                                        class="icon icon--lg icon--fill" href="https://discord.com/invite/7rGMw45mZv"
+                                        target="_blank" aria-label="URL"> <svg viewBox="23 23 64 64">
+                                            <use xlink:href="#url-icon" width="110" height="110"></use>
+                                        </svg> </a> </div>
+                                <div class="header-menu-actions-action header-menu-actions-action--social"> <a
+                                        class="icon icon--lg icon--fill"
+                                        href="https://www.facebook.com/steel.angels.353" target="_blank"
+                                        aria-label="Facebook"> <svg viewBox="23 23 64 64">
+                                            <use xlink:href="#facebook-unauth-icon" width="110" height="110"></use>
+                                        </svg> </a> </div>
+                            </div>
+                            <div class="header-menu-cta"><a class="theme-btn--primary btn" href="#/apply-for-clan">Apply for clan</a></div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main id="page" class="container" role="main">
+            <article class="sections" id="sections">
+                <!--<section class='page-section layout-engine-section background-width--inset section-height--large horizontal-alignment--center vertical-alignment--middle has-background dark-bold'>
+                    <div class="section-background">
+                        <img alt="" data-src="" data-image=""/>
+                        <div class="section-background-overlay"></div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="content" style="width: 100%;">
+                            <div class="sqs-layout sqs-grid-12 columns-12 empty" data-type="page-section"></div>
+                        </div>
+                    </div>
+                </section>-->
+                <section class='page-section layout-engine-section background-width--full-bleed section-height--small content-width--wide horizontal-alignment--center vertical-alignment--middle white-bold'>
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section">
+                                <div class="row sqs-row">
+                                    <div class="col sqs-col-12 span-12">
+                                        <div class="sqs-block html-block sqs-block-html" data-block-type="2">
+                                            <div class="sqs-block-content">
+                                                <h2 style="text-align:center;white-space:pre-wrap;">“Our wings will never be shot down.”</h2>
+                                            </div>
+                                        </div>
+                                        <!--<div class="sqs-block horizontalrule-block sqs-block-horizontalrule"
+                                            data-block-type="47">
+                                            <div class="sqs-block-content">
+                                                <hr />
+                                            </div>
+                                        </div>-->
+                                        <br>
+                                        <br>
+                                        <div class="sqs-block image-block sqs-block-image"
+                                            data-aspect-ratio="117.43295019157087" data-block-type="5">
+                                            <div class="sqs-block-content">
+                                                <div id="x-center-overview">
+                                                    <img src="static/img/ico.jpg" alt="SteelANGELS Gaming is a professionally run clan primarily in call of duty mobile, but soon to be in multiple games both casually and competitively! - Call of duty mobileCritical Ops (Coming Soon) Standoff 2 (Coming Soon) Apex Mobile (Coming Soon)Warzone Mobile (Coming Soon)" style="border-radius: 25px;">
+                                                    <div class="image-card sqs-dynamic-text-container" style="text-align: center;">
+                                                        <div class="image-title-wrapper" style="width: 90%;margin: auto;">
+                                                            <div class="image-title sqs-dynamic-text"
+                                                                data-animation-override>
+                                                                <h4 style="white-space:pre-wrap;">SteelANGELS Gaming is a professionally run clan primarily in call of duty mobile, but soon to be in multiple games both casually and competitively!</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="image-subtitle-wrapper">
+                                                            <div class="image-subtitle sqs-dynamic-text"
+                                                                data-animation-override>
+                                                                <h4 style="white-space:pre-wrap;">Call of duty mobile<br>Critical Ops (Coming Soon)<br>Standoff 2 (Coming Soon)<br>Apex Mobile (Coming Soon)<br>Warzone Mobile (Coming Soon)</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="image-button-wrapper">
+                                                            <div class="image-button sqs-dynamic-text">
+                                                                <div class="image-button-inner"> <a href="#/apply-for-clan">Apply for Clan</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<figure class="sqs-block-image-figure image-block-outer-wrapper image-block-v2 design-layout-collage combination-animation-collide individual-animation-none individual-text-animation-none image-position-left image-linked " data-scrolled data-test="image-block-v2-outer-wrapper">
+                                                    <div class="intrinsic">
+                                                        <div class=" image-inset content-fit "
+                                                            data-animation-role="image" data-description=""
+                                                            data-animation-override>
+                                                            <img data-src="" data-image="" data-image-dimensions="482x476" data-image-focal-point="0.5,0.5" alt="image2 (2).jpg" />
+                                                            <div class="image-overlay"></div>
+                                                        </div>
+                                                    </div>
+                                                    <figcaption class="image-card-wrapper" data-width-ratio>
+                                                        <div class="image-card sqs-dynamic-text-container">
+                                                            <div class="image-title-wrapper">
+                                                                <div class="image-title sqs-dynamic-text"
+                                                                    data-animation-override>
+                                                                    <h4 style="margin-left:40px;white-space:pre-wrap;">
+                                                                        SteelANGELS Gaming is a professionally run clan
+                                                                        primarily in call of duty mobile, but soon to be
+                                                                        in multiple games both casually and
+                                                                        competitively! </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-subtitle-wrapper">
+                                                                <div class="image-subtitle sqs-dynamic-text"
+                                                                    data-animation-override>
+                                                                    <h4 style="text-align:center;white-space:pre-wrap;">
+                                                                        <br>Call of duty mobile<br>Critical Ops (Coming
+                                                                        Soon)<br>Standoff 2 (Coming Soon)<br>Apex Mobile
+                                                                        (Coming Soon)<br>Warzone Mobile (Coming Soon)
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-button-wrapper">
+                                                                <div class="image-button sqs-dynamic-text">
+                                                                    <div class="image-button-inner"> <a
+                                                                            href="#/apply-for-clan">Apply for Clan</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class='page-section gallery-section full-bleed-section background-width--full-bleed section-height--medium content-width--wide horizontal-alignment--center vertical-alignment--middle'>
+                    <div class="section-background"></div>
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <div class="gallery gallery-section-wrapper" style="min-height: 100px;">
+                                <div class="gallery" style="min-height: 100px;">
+                                    <!-- Gallery Masonry -->
+                                    <!--<div class="gallery-masonry" data-controller="GalleryMasonry" data-animation="scale-up" data-lightbox="" data-width="inset" data-props='{ "scrollAnimation": "scale-up", "gutter": 50, "numColumns": 3, "width": "inset", "lightboxEnabled": false}' data-show-captions="false" data-gallery-caption-beta-flag="false">
+                                        <div class="gallery-masonry-wrapper">
+                                            <figure class="gallery-masonry-item">
+                                                <div class="gallery-masonry-item-wrapper">
+                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65dd1be07951ea92ea33b/1609981395183/image0.jpg" data-src="" data-image="" data-image-dimensions="361x361" data-image-focal-point="0.5,0.5" alt="image0.jpg" data-load="false" />
+                                                </div>
+                                            </figure>
+                                            <figure class="gallery-masonry-item">
+                                                <div class="gallery-masonry-item-wrapper">
+                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65de13c80dd4133974488/1609981432881/image0+%282%29.gif" data-src="" data-image="" data-image-dimensions="500x500" data-image-focal-point="0.5,0.5" alt="image0 (2).gif" data-load="false" />
+                                                </div>
+                                            </figure>
+                                            <figure class="gallery-masonry-item">
+                                                <div class="gallery-masonry-item-wrapper">
+                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65dd604b1802668e4f030/1609981400955/image2+%281%29.jpg" data-src="" data-image="" data-image-dimensions="482x476" data-image-focal-point="0.5,0.5" alt="image2 (1).jpg" data-load="false" />
+                                                </div>
+                                            </figure>
+                                            <figure class="gallery-masonry-item">
+                                                <div class="gallery-masonry-item-wrapper">
+                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65dccc0d11c50f92556fb/1609981391536/image1+%282%29.jpg" data-src="" data-image="" data-image-dimensions="844x475" data-image-focal-point="0.5,0.5" alt="image1 (2).jpg" data-load="false">
+                                                </div>
+                                            </figure>
+                                            <figure class="gallery-masonry-item">
+                                                <div class="gallery-masonry-item-wrapper">
+                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65df5f2fc6a5e3d7a5222/1609981431115/image1+%281%29.jpg" data-src="" data-image="" data-image-dimensions="416x245" data-image-focal-point="0.5,0.5" alt="image1 (1).jpg" data-load="false">
+                                                </div>
+                                            </figure>
+                                            <figure class="gallery-masonry-item">
+                                                <div class="gallery-masonry-item-wrapper">
+                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65e26b68a90071644696d/1609981490988/image7.jpg" data-src="" data-image="" data-image-dimensions="669x512" data-image-focal-point="0.5,0.5" alt="image7.jpg">
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="gallery-lightbox-outer-wrapper">
+                                            <div role="dialog" aria-label="Gallery" class=" gallery-lightbox ">
+                                                <div class="gallery-lightbox-background"></div>
+                                                <div class="gallery-lightbox-header">
+                                                    <button class="gallery-lightbox-close-btn" aria-label="Close">
+                                                        <div class="gallery-lightbox-close-btn-icon">
+                                                            <svg viewBox="0 0 40 40"><path d="M4.3,35.7L35.7,4.3" /><path d="M4.3,4.3l31.4,31.4" /></svg>
+                                                            </div>
+                                                    </button></div>
+                                                <div class="gallery-lightbox-wrapper">
+                                                    <div class="gallery-lightbox-list">
+                                                        <figure class="gallery-lightbox-item">
+                                                            <div class="gallery-lightbox-item-wrapper">
+                                                                <div class="gallery-lightbox-item-src">
+                                                                    <div class="gallery-lightbox-item-img content-fit ">
+                                                                        <img data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65dd1be07951ea92ea33b/1609981395183/image0.jpg" alt="image0.jpg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class="gallery-lightbox-item" data-slide-url="1p46ms6yjb6pynzs96hzi5xy288oe4" data-test="gallery-lightbox-item">
+                                                            <div class="gallery-lightbox-item-wrapper">
+                                                                <div class="gallery-lightbox-item-src">
+                                                                    <div class=" gallery-lightbox-item-img content-fit ">
+                                                                        <img data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65de13c80dd4133974488/1609981432881/image0+%282%29.gif" alt="image0 (2).gif" data-load="false" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class="gallery-lightbox-item">
+                                                            <div class="gallery-lightbox-item-wrapper">
+                                                                <div class="gallery-lightbox-item-src">
+                                                                    <div class=" gallery-lightbox-item-img content-fit ">
+                                                                        <img data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65dd604b1802668e4f030/1609981400955/image2+%281%29.jpg" alt="image2 (1).jpg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class="gallery-lightbox-item">
+                                                            <div class="gallery-lightbox-item-wrapper">
+                                                                <div class="gallery-lightbox-item-src">
+                                                                    <div class=" gallery-lightbox-item-img content-fit">
+                                                                        <img data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65dccc0d11c50f92556fb/1609981391536/image1+%282%29.jpg" alt="image1 (2).jpg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class="gallery-lightbox-item">
+                                                            <div class="gallery-lightbox-item-wrapper">
+                                                                <div class="gallery-lightbox-item-src">
+                                                                    <div class=" gallery-lightbox-item-img content-fit ">
+                                                                        <img data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65df5f2fc6a5e3d7a5222/1609981431115/image1+%281%29.jpg" alt="image1 (1).jpg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                        <figure class="gallery-lightbox-item">
+                                                            <div class="gallery-lightbox-item-wrapper">
+                                                                <div class="gallery-lightbox-item-src">
+                                                                    <div class=" gallery-lightbox-item-img content-fit ">
+                                                                        <img data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/5ff65dbaea4dd066264b8546/5ff65e26b68a90071644696d/1609981490988/image7.jpg" alt="image7.jpg"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                    </div>
+                                                    <div class="gallery-lightbox-controls">
+                                                        <div class="gallery-lightbox-control">
+                                                            <button class="gallery-lightbox-control-btn" aria-label="Previous Slide">
+                                                                <div class="gallery-lightbox-control-btn-icon">
+                                                                    <svg class="caret-left-icon--small" viewBox="0 0 9 16">
+                                                                        <polyline fill="none" stroke-miterlimit="10" points="7.3,14.7 2.5,8 7.3,1.2" />
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="gallery-lightbox-control" data-next
+                                                            data-test="gallery-lightbox-control-next"> <button
+                                                                class="gallery-lightbox-control-btn"
+                                                                aria-label="Next Slide">
+                                                                <div class="gallery-lightbox-control-btn-icon">
+                                                                    <svg class="caret-right-icon--small" viewBox="0 0 9 16">
+                                                                        <polyline fill="none" stroke-miterlimit="10" points="1.6,1.2 6.5,7.9 1.6,14.7 " />
+                                                                    </svg>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <script type="text/javascript">
+            const firstSection = document.querySelector('.page-section');
+            const header = document.querySelector('.header');
+            const mobileOverlayNav = document.querySelector('.header-menu');
+            const sectionBackground = firstSection ? firstSection.querySelector('.section-background') : null;
+            const headerHeight = header ? header.getBoundingClientRect().height : 0;
+            const firstSectionHasBackground = firstSection ? firstSection.className.indexOf('has-background') >= 0 :
+                false;
+            const isFirstSectionInset = firstSection ? firstSection.className.indexOf('background-width--inset') >= 0 :
+                false;
+            const isLayoutEngineSection = firstSection ? firstSection.className.indexOf('layout-engine-section') >= 0 :
+                false;
+            if (firstSection) {
+                firstSection.style.paddingTop = headerHeight + 'px';
+            }
+            if (sectionBackground && isLayoutEngineSection) {
+                if (isFirstSectionInset) {
+                    sectionBackground.style.top = headerHeight + 'px';
+                } else {
+                    sectionBackground.style.top = '';
+                }
+            } //# sourceURL=headerPositioning.js 
+        </script>
+        <footer class="sections" id="footer-sections" data-footer-sections>
+            <section class='page-section layout-engine-section background-width--full-bleed section-height--small horizontal-alignment--center vertical-alignment--middle black'>
+                <div class="section-background"></div>
+                <div class="content-wrapper">
+                    <div class="content">
+                        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
+                            id="page-section-5fe77c2902ea43640bc9dd18">
+                            <div class="row sqs-row">
+                                <div class="col sqs-col-12 span-12">
+                                    <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1"
+                                        data-block-type="21" id="block-a55e6d88ff297d4718ca">
+                                        <div class="sqs-block-content">&nbsp;</div>
+                                    </div>
+                                    <div class="row sqs-row">
+                                        <div class="col sqs-col-5 span-5">
+                                            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-ca9703398501c390ddba">
+                                                <div class="sqs-block-content">
+                                                    <h4 style="text-align:center;white-space:pre-wrap;"><strong>CONTACT</strong></h4>
+                                                    <p style="text-align:center;white-space:pre-wrap;" class="sqsrte-small"><a href="mailto:steelangelsgaming@gmail.com">steelangelsgaming@gmail.com</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col sqs-col-2 span-2">
+                                            <div class="sqs-block image-block sqs-block-image"
+                                                data-aspect-ratio="52.25225225225225" data-block-type="5"
+                                                id="block-e9963bd46ad6321150c4">
+                                                <div class="sqs-block-content">
+                                                    <div class=" image-block-outer-wrapper layout-caption-below design-layout-inline combination-animation-slide-up individual-animation-site-default individual-text-animation-site-default "
+                                                        data-test="image-block-inline-outer-wrapper">
+                                                        <figure class=" sqs-block-image-figure intrinsic "
+                                                            style="max-width:571.0px;">
+                                                            <div style="padding-bottom:52.25225067138672%;"
+                                                                class=" image-block-wrapper has-aspect-ratio">
+                                                                <noscript>
+                                                                    <img src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/t/5ff64c990e14c43ed1aa504f/1609977001325/20210106_153600-removebg-preview.png"
+                                                                        alt="20210106_153600-removebg-preview.png" />
+                                                                </noscript>
+                                                                <img class="thumb-image"
+                                                                    data-src="https://static1.squarespace.com/static/5fe77c2902ea43640bc9dce3/t/5ff64c990e14c43ed1aa504f/1609977001325/20210106_153600-removebg-preview.png"
+                                                                    alt="20210106_153600-removebg-preview.png" />
+                                                            </div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col sqs-col-5 span-5">
+                                            <div class="sqs-block html-block sqs-block-html">
+                                                <div class="sqs-block-content">
+                                                    <h4 style="text-align:center;white-space:pre-wrap;"><strong>FOLLOW</strong></h4>
+                                                </div>
+                                            </div>
+                                            <div class="sqs-block socialaccountlinks-v2-block sqs-block-socialaccountlinks-v2"
+                                                data-block-type="54" id="block-e1d243a02261468fcd6e">
+                                                <div class="sqs-block-content">
+                                                    <div class="sqs-svg-icon--outer social-icon-alignment-center social-icons-color- social-icons-size-large social-icons-shape-circle social-icons-style-knockout">
+                                                        <nav class="sqs-svg-icon--list">
+                                                            <a href="https://www.youtube.com/channel/UCvlHPCDMWFA_L_LWETpnPOQ" target="_blank" class="sqs-svg-icon--wrapper youtube-unauth" aria-label="YouTube">
+                                                                <div>
+                                                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                                                                        <use class="sqs-use--icon" xlink:href="#youtube-unauth-icon"></use>
+                                                                        <use class="sqs-use--mask" xlink:href="#youtube-unauth-mask"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                            <a href="https://www.instagram.com/steelangelsgaming/?r=nametag" target="_blank" class="sqs-svg-icon--wrapper instagram-unauth" aria-label="">
+                                                                <div>
+                                                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                                                                        <use class="sqs-use--icon" xlink:href="#instagram-unauth-icon"></use>
+                                                                        <use class="sqs-use--mask" xlink:href="#instagram-unauth-mask"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                            <a href="https://twitter.com/steelangelstm?s=09" target="_blank" class="sqs-svg-icon--wrapper twitter-unauth" aria-label="">
+                                                                <div>
+                                                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                                                                        <use class="sqs-use--icon" xlink:href="#twitter-unauth-icon"></use>
+                                                                        <use class="sqs-use--mask" xlink:href="#twitter-unauth-mask"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                            <a href="https://discord.com/invite/7rGMw45mZv" target="_blank" class="sqs-svg-icon--wrapper url" aria-label="URL">
+                                                                <div>
+                                                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                                                                        <use class="sqs-use--icon" xlink:href="#url-icon"></use>
+                                                                        <use class="sqs-use--mask" xlink:href="#url-mask"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                            <a href="https://www.facebook.com/steel.angels.353" target="_blank" class="sqs-svg-icon--wrapper facebook-unauth" aria-label="Facebook">
+                                                                <div>
+                                                                    <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                                                                        <use class="sqs-use--icon" xlink:href="#facebook-unauth-icon"></use>
+                                                                        <use class="sqs-use--mask" xlink:href="#facebook-unauth-mask"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </a>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1"
+                                        data-block-type="21" id="block-1758864e5e3ba98381d6">
+                                        <div class="sqs-block-content">&nbsp;</div>
+                                    </div>
+                                    <div class="sqs-block html-block sqs-block-html" data-block-type="2"
+                                        id="block-7cfd7820446db8439aa5">
+                                        <div class="sqs-block-content">
+                                            <p style="text-align:center;white-space:pre-wrap;" class="sqsrte-small">SteelANGELS Gaming™ 2020 - 2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <!--<script defer="defer"
+        src="static/js/site-bundle.js"
+        type="text/javascript"></script>
+    <script defer="defer"
+        src="static/js/site-common.js"
+        type="text/javascript"></script>-->
+    <script type="text/javascript" data-sqs-type="imageloader-bootstrapper">
+        (function () {
+            if (window.ImageLoader) {
+                window.ImageLoader.bootstrap({}, document);
+            }
+        })();
+    </script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg">
+        <symbol id="youtube-unauth-icon" viewBox="0 0 64 64">
+            <path
+                d="M46.7,26c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C38.3,21.4,32,21.4,32,21.4h0 c0,0-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3S17,28.4,17,30.9v2.3c0,2.4,0.3,4.9,0.3,4.9s0.3,2.1,1.2,3 c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.3,10.2,0.3s6.3,0,10.5-0.3c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.4,0.3-4.9 v-2.3C47,28.4,46.7,26,46.7,26z M28.9,35.9l0-8.4l8.1,4.2L28.9,35.9z" />
+        </symbol>
+        <symbol id="youtube-unauth-mask" viewBox="0 0 64 64">
+            <path
+                d="M0,0v64h64V0H0z M47,33.1c0,2.4-0.3,4.9-0.3,4.9s-0.3,2.1-1.2,3c-1.1,1.2-2.4,1.2-3,1.3 C38.3,42.5,32,42.6,32,42.6s-7.8-0.1-10.2-0.3c-0.7-0.1-2.2-0.1-3.3-1.3c-0.9-0.9-1.2-3-1.2-3S17,35.6,17,33.1v-2.3 c0-2.4,0.3-4.9,0.3-4.9s0.3-2.1,1.2-3c1.1-1.2,2.4-1.2,3-1.3c4.2-0.3,10.5-0.3,10.5-0.3h0c0,0,6.3,0,10.5,0.3c0.6,0.1,1.9,0.1,3,1.3 c0.9,0.9,1.2,3,1.2,3s0.3,2.4,0.3,4.9V33.1z M28.9,35.9l8.1-4.2l-8.1-4.2L28.9,35.9z" />
+        </symbol>
+        <symbol id="instagram-unauth-icon" viewBox="0 0 64 64">
+            <path
+                d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z" />
+        </symbol>
+        <symbol id="instagram-unauth-mask" viewBox="0 0 64 64">
+            <path
+                d="M43.693,23.153c-0.272-0.7-0.597-1.2-1.122-1.725c-0.525-0.525-1.025-0.85-1.725-1.122c-0.529-0.205-1.323-0.45-2.785-0.517c-1.582-0.072-2.056-0.087-6.061-0.087s-4.48,0.015-6.061,0.087c-1.462,0.067-2.257,0.311-2.785,0.517c-0.7,0.272-1.2,0.597-1.725,1.122c-0.525,0.525-0.85,1.025-1.122,1.725c-0.205,0.529-0.45,1.323-0.516,2.785c-0.072,1.582-0.087,2.056-0.087,6.061s0.015,4.48,0.087,6.061c0.067,1.462,0.311,2.257,0.516,2.785c0.272,0.7,0.597,1.2,1.122,1.725s1.025,0.85,1.725,1.122c0.529,0.205,1.323,0.45,2.785,0.516c1.581,0.072,2.056,0.087,6.061,0.087s4.48-0.015,6.061-0.087c1.462-0.067,2.257-0.311,2.785-0.516c0.7-0.272,1.2-0.597,1.725-1.122s0.85-1.025,1.122-1.725c0.205-0.529,0.45-1.323,0.516-2.785c0.072-1.582,0.087-2.056,0.087-6.061s-0.015-4.48-0.087-6.061C44.143,24.476,43.899,23.682,43.693,23.153z M32,39.703c-4.254,0-7.703-3.449-7.703-7.703s3.449-7.703,7.703-7.703s7.703,3.449,7.703,7.703S36.254,39.703,32,39.703z M40.007,25.793c-0.994,0-1.8-0.806-1.8-1.8c0-0.994,0.806-1.8,1.8-1.8c0.994,0,1.8,0.806,1.8,1.8C41.807,24.987,41.001,25.793,40.007,25.793z M0,0v64h64V0H0z M46.91,38.184c-0.073,1.597-0.326,2.687-0.697,3.641c-0.383,0.986-0.896,1.823-1.73,2.657c-0.834,0.834-1.67,1.347-2.657,1.73c-0.954,0.371-2.044,0.624-3.641,0.697C36.585,46.983,36.074,47,32,47s-4.585-0.017-6.184-0.09c-1.597-0.073-2.687-0.326-3.641-0.697c-0.986-0.383-1.823-0.896-2.657-1.73c-0.834-0.834-1.347-1.67-1.73-2.657c-0.371-0.954-0.624-2.044-0.697-3.641C17.017,36.585,17,36.074,17,32c0-4.074,0.017-4.585,0.09-6.185c0.073-1.597,0.326-2.687,0.697-3.641c0.383-0.986,0.896-1.823,1.73-2.657c0.834-0.834,1.67-1.347,2.657-1.73c0.954-0.371,2.045-0.624,3.641-0.697C27.415,17.017,27.926,17,32,17s4.585,0.017,6.184,0.09c1.597,0.073,2.687,0.326,3.641,0.697c0.986,0.383,1.823,0.896,2.657,1.73c0.834,0.834,1.347,1.67,1.73,2.657c0.371,0.954,0.624,2.044,0.697,3.641C46.983,27.415,47,27.926,47,32C47,36.074,46.983,36.585,46.91,38.184z M32,27c-2.761,0-5,2.239-5,5s2.239,5,5,5s5-2.239,5-5S34.761,27,32,27z" />
+        </symbol>
+        <symbol id="twitter-unauth-icon" viewBox="0 0 64 64">
+            <path
+                d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z" />
+        </symbol>
+        <symbol id="twitter-unauth-mask" viewBox="0 0 64 64">
+            <path
+                d="M0,0v64h64V0H0z M44.7,25.5c0,0.3,0,0.6,0,0.8C44.7,35,38.1,45,26.1,45c-3.7,0-7.2-1.1-10.1-2.9 c0.5,0.1,1,0.1,1.6,0.1c3.1,0,5.9-1,8.2-2.8c-2.9-0.1-5.3-2-6.1-4.6c0.4,0.1,0.8,0.1,1.2,0.1c0.6,0,1.2-0.1,1.7-0.2 c-3-0.6-5.3-3.3-5.3-6.4c0,0,0-0.1,0-0.1c0.9,0.5,1.9,0.8,3,0.8c-1.8-1.2-2.9-3.2-2.9-5.5c0-1.2,0.3-2.3,0.9-3.3 c3.2,4,8.1,6.6,13.5,6.9c-0.1-0.5-0.2-1-0.2-1.5c0-3.6,2.9-6.6,6.6-6.6c1.9,0,3.6,0.8,4.8,2.1c1.5-0.3,2.9-0.8,4.2-1.6 c-0.5,1.5-1.5,2.8-2.9,3.6c1.3-0.2,2.6-0.5,3.8-1C47.1,23.4,46,24.5,44.7,25.5z" />
+        </symbol>
+        <symbol id="url-icon" viewBox="0 0 64 64">
+            <path
+                d="M40.038 24c2.203 0 4.08.801 5.633 2.404C47.224 27.956 48 29.834 48 32.038c0 2.203-.776 4.106-2.329 5.709-1.552 1.552-3.43 2.328-5.633 2.328h-6.46v-3.08h6.46c1.352 0 2.504-.475 3.455-1.427 1.002-1.002 1.502-2.178 1.502-3.53 0-1.353-.5-2.504-1.502-3.456-.952-1.001-2.103-1.502-3.455-1.502h-6.46V24h6.46zm-14.423 9.615V30.46h12.77v3.155h-12.77zm-5.183-5.033c-.952.952-1.427 2.103-1.427 3.456 0 1.352.475 2.529 1.427 3.53 1.002.952 2.178 1.427 3.53 1.427h6.46v3.08h-6.46c-2.203 0-4.08-.776-5.633-2.329C16.776 36.145 16 34.241 16 32.038c0-2.204.776-4.082 2.329-5.634C19.88 24.8 21.759 24 23.962 24h6.46v3.08h-6.46c-1.352 0-2.529.5-3.53 1.502z" />
+        </symbol>
+        <symbol id="url-mask" viewBox="0 0 64 64">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M64 0H0v64h64V0zM45.671 26.404C44.12 24.8 42.241 24 40.038 24h-6.46v3.08h6.46c1.352 0 2.504.5 3.455 1.502 1.002.952 1.502 2.103 1.502 3.456 0 1.352-.5 2.529-1.502 3.53-.952.952-2.103 1.427-3.455 1.427h-6.46v3.08h6.46c2.203 0 4.08-.776 5.633-2.329C47.224 36.145 48 34.241 48 32.038c0-2.204-.776-4.082-2.329-5.634zm-7.286 4.056h-12.77v3.155h12.77V30.46zm-19.38 1.578c0-1.353.475-2.504 1.427-3.456 1.002-1.001 2.178-1.502 3.53-1.502h6.46V24h-6.46c-2.203 0-4.08.801-5.633 2.404C16.776 27.956 16 29.834 16 32.038c0 2.203.776 4.106 2.329 5.709 1.552 1.552 3.43 2.328 5.633 2.328h6.46v-3.08h-6.46c-1.352 0-2.529-.475-3.53-1.427-.952-1.002-1.427-2.178-1.427-3.53z" />
+        </symbol>
+        <symbol id="facebook-unauth-icon" viewBox="0 0 64 64">
+            <path
+                d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z" />
+        </symbol>
+        <symbol id="facebook-unauth-mask" viewBox="0 0 64 64">
+            <path
+                d="M0,0v64h64V0H0z M39.6,22l-2.8,0c-2.2,0-2.6,1.1-2.6,2.6V28h5.3l-0.7,5.3h-4.6V47h-5.5V33.3H24V28h4.6V24 c0-4.6,2.8-7,6.9-7c2,0,3.6,0.1,4.1,0.2V22z" />
+        </symbol>
+    </svg>
+</body>
+
 </html>

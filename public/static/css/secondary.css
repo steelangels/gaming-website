@@ -2367,6 +2367,18 @@ body>.login-wrapper.hidden {
     height: 1020px
 }
 
+@keyframes fadeLoadingLogo {
+    0% {
+        opacity: 0;
+        top: 44%
+    }
+
+    100% {
+        opacity: .5;
+        top: 50%
+    }
+}
+
 @-moz-keyframes fadeLoadingLogo {
     0% {
         opacity: 0;
@@ -2391,6 +2403,16 @@ body>.login-wrapper.hidden {
     }
 }
 
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
 @-moz-keyframes fadein {
     0% {
         opacity: 0
@@ -2408,6 +2430,16 @@ body>.login-wrapper.hidden {
 
     100% {
         opacity: 1
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
     }
 }
 
@@ -6117,7 +6149,7 @@ body.sqs-lightbox-open {
 }
 
 .product-block .productDetails .product-quantity-input input {
-    background-color: #fff;
+    /*background-color: #fff;*/
     color: #222
 }
 
@@ -7443,7 +7475,7 @@ body:not(.sqs-seven-one) .sqs-announcement-bar-text {
     font-weight: 500;
     letter-spacing: 0em;
     font-size: 1rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-size: .9rem;
     font-weight: 300;
     font-style: normal;
@@ -7465,7 +7497,7 @@ body:not(.sqs-seven-one) .sqs-announcement-bar-text p {
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 1rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-size: .9rem;
     font-weight: 300;
     font-style: normal;
@@ -8586,7 +8618,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -8600,7 +8632,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -8625,7 +8657,7 @@ body:not(.tweak-product-quick-view-lightbox-show-close-button) .sqs-product-quic
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1em;
     letter-spacing: .05em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     text-transform: none;
@@ -8645,7 +8677,7 @@ body {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -8720,11 +8752,12 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -8855,7 +8888,7 @@ h4 {
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1em;
     letter-spacing: .05em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     text-transform: none;
@@ -8923,7 +8956,7 @@ h4 {
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1em;
     letter-spacing: .05em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     text-transform: none;
@@ -8990,7 +9023,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 1rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9053,7 +9086,7 @@ p,
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -9099,7 +9132,7 @@ p,
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9150,7 +9183,7 @@ p,
     }
 }
 
-@media screen and (max-width: 575px) and screen and (min-width:0) and (max-width:calc(1620px - 1px)) and (orientation:landscape) {
+@media screen and (max-width: 575px) and (screen) and (min-width:0) and (max-width:calc(1620px - 1px)) and (orientation:landscape) {
 
     [data-mobile-header-font-tweaks="true"] .header-nav-item,
     [data-mobile-header-font-tweaks="true"] .user-accounts-text-link,
@@ -9159,7 +9192,7 @@ p,
     }
 }
 
-@media screen and (max-width: 575px) and screen and (min-width:0) and (max-width:calc(1620px - 1px)) and (orientation:portrait) {
+@media screen and (max-width: 575px) and (screen) and (min-width:0) and (max-width:calc(1620px - 1px)) and (orientation:portrait) {
 
     [data-mobile-header-font-tweaks="true"] .header-nav-item,
     [data-mobile-header-font-tweaks="true"] .user-accounts-text-link,
@@ -9168,7 +9201,7 @@ p,
     }
 }
 
-@media screen and (max-width: 575px) and screen and (min-width:1620px) {
+@media screen and (max-width: 575px) and (screen) and (min-width:1620px) {
 
     [data-mobile-header-font-tweaks="true"] .header-nav-item,
     [data-mobile-header-font-tweaks="true"] .user-accounts-text-link,
@@ -9182,7 +9215,7 @@ p,
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9208,7 +9241,7 @@ p,
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0em;
@@ -9245,7 +9278,7 @@ p,
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0em;
@@ -9330,7 +9363,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9345,7 +9378,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9358,7 +9391,7 @@ p,
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1em;
     letter-spacing: .05em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     text-transform: none;
@@ -9403,7 +9436,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 1rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -9437,7 +9470,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.4em;
     font-size: 1rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9548,7 +9581,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 1rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -9581,7 +9614,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.4em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9693,7 +9726,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 1rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -9726,7 +9759,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.4em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9837,7 +9870,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -9870,7 +9903,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.4em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -9981,7 +10014,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10015,7 +10048,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.4em;
     font-size: 1rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -10136,7 +10169,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 4rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10216,7 +10249,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.4em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -10256,7 +10289,7 @@ p,
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0em;
     font-size: 1.2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10299,7 +10332,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10342,7 +10375,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10385,7 +10418,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 4rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10418,7 +10451,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 4rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10461,7 +10494,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 4rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10504,7 +10537,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 4rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10545,7 +10578,7 @@ p,
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0em;
     font-size: 1.2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10627,7 +10660,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -10660,7 +10693,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10692,7 +10725,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.1em;
     font-size: 1rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10834,7 +10867,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -10981,7 +11014,7 @@ p,
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0em;
     font-size: 1.2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -11019,7 +11052,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11094,7 +11127,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -11137,7 +11170,7 @@ p,
     letter-spacing: 0em;
     line-height: 1.2em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -11179,7 +11212,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11222,7 +11255,7 @@ p,
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11370,7 +11403,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11402,7 +11435,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11435,7 +11468,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11468,7 +11501,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11501,7 +11534,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11534,7 +11567,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11567,7 +11600,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11600,7 +11633,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11632,7 +11665,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11665,7 +11698,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: .8rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11745,7 +11778,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: 2rem;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -11777,7 +11810,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11808,7 +11841,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 0em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11839,7 +11872,7 @@ body:not(.button-style-default) .sqs-block-form .sqs-editable-button {
     font-weight: 400;
     letter-spacing: 0em;
     line-height: 1.8em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -11870,7 +11903,7 @@ body:not(.button-style-default) .newsletter-form .newsletter-form-button {
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 0em;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -12003,7 +12036,7 @@ div.sqs-block-opentable-v2 .squarespace-opentable-new-age-wrapper h1 {
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -12056,7 +12089,7 @@ div.sqs-block-opentable-v2 .squarespace-opentable-new-age-wrapper h1 {
     letter-spacing: 0em;
     line-height: 1.8em;
     font-size: 1rem;
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -14660,7 +14693,7 @@ body.button-style-default .sqs-add-to-cart-button {
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1em;
     letter-spacing: .05em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     text-transform: none;
@@ -16587,7 +16620,7 @@ img[data-src]:not([src]) {
     }
 }
 
-@media screen and (min-width: 576px) and screen and (max-width: 575px) {
+@media screen and (min-width: 576px) and (screen) and (max-width: 575px) {
     .products.collection-content-wrapper .nested-category-children::after {
         content: none
     }
@@ -16713,13 +16746,13 @@ img[data-src]:not([src]) {
     }
 }
 
-@media screen and (min-width: 576px) and screen and (max-width: 575px) {
+@media screen and (min-width: 576px) and (screen) and (max-width: 575px) {
     .tweak-products-nested-category-type-sidebar.tweak-products-category-title .products.collection-content-wrapper .nested-category-title::after {
         content: none
     }
 }
 
-@media screen and (min-width: 576px) and screen and (max-width: 575px) {
+@media screen and (min-width: 576px) and (screen) and (max-width: 575px) {
     .tweak-products-nested-category-type-sidebar.tweak-products-category-title .products.collection-content-wrapper .nested-category-title {
         padding-bottom: 30px;
         margin-bottom: 0
@@ -16811,13 +16844,13 @@ img[data-src]:not([src]) {
     }
 }
 
-@media screen and (min-width: 576px) and screen and (max-width: 575px) {
+@media screen and (min-width: 576px) and (screen) and (max-width: 575px) {
     .tweak-products-breadcrumbs.tweak-products-nested-category-type-sidebar:not(.tweak-products-category-title) .products.collection-content-wrapper .nested-category-breadcrumb::after {
         content: none
     }
 }
 
-@media screen and (min-width: 576px) and screen and (max-width: 575px) {
+@media screen and (min-width: 576px) and (screen) and (max-width: 575px) {
     .tweak-products-breadcrumbs.tweak-products-nested-category-type-sidebar:not(.tweak-products-category-title) .products.collection-content-wrapper .nested-category-breadcrumb {
         padding-bottom: 30px;
         margin-bottom: 0
@@ -21792,7 +21825,7 @@ body:not(.tweak-events-stacked-ical-gcal-links) .event-meta-addtocalendar-contai
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -22346,7 +22379,7 @@ body:not(.tweak-events-stacked-ical-gcal-links) .event-meta-addtocalendar-contai
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2em;
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -23884,10 +23917,7 @@ body {
     color: #000
 }
 
-.page-section {
-    background-color: #fff
-}
-
+=
 p a {
     color: #000
 }
@@ -23912,14 +23942,6 @@ div.sqs-block-opentable-v2 h1 {
 
 .page-section {
     color: #000
-}
-
-.page-section.background-width--inset {
-    background-color: #fff
-}
-
-:not(.has-background) .section-background {
-    background-color: #fff
 }
 
 h1 {
@@ -24124,15 +24146,6 @@ body.primary-button-style-outline .newsletter-form-button {
     color: #000
 }
 
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .image-button a::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .sqs-add-to-cart-button::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .sqs-editable-button:not(input)::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid .sqs-block-button-element::before,
-.no-touch .tweak-global-animations-animation-type-flex.primary-button-style-solid [data-animation-role="header-element"] .btn::before {
-    border-color: #000;
-    background-color: #fff
-}
-
 .no-touch .tweak-global-animations-animation-type-flex.primary-button-style-outline .image-button a:hover,
 .no-touch .tweak-global-animations-animation-type-flex.primary-button-style-outline .sqs-add-to-cart-button:hover,
 .no-touch .tweak-global-animations-animation-type-flex.primary-button-style-outline .sqs-editable-button:not(input):hover,
@@ -24153,10 +24166,6 @@ body.primary-button-style-outline .newsletter-form-button {
 
 .sqs-block-horizontalrule hr {
     background-color: #000
-}
-
-.section-background-overlay {
-    background-color: #fff
 }
 
 .floating-cart {
@@ -24185,7 +24194,7 @@ body.primary-button-style-outline .newsletter-form-button {
 }
 
 body[data-menu-overlay-theme-switcher="true"] .header {
-    background-color: #fff
+    /*background-color: #fff;*/
 }
 
 body[data-menu-overlay-theme-switcher="true"]:not(.header--menu-open) .header-title-text a {
@@ -25073,7 +25082,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .products.collection-content-wrapper .grid-item.on-sale .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .products.collection-content-wrapper .grid-item.on-sale .original-price .sqs-money-native {
@@ -25081,7 +25090,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .products.collection-content-wrapper .product-mark.sale {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .products.collection-content-wrapper .list-pagination .product-list-pagination-icon svg {
@@ -25138,7 +25147,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .products.collection-content-wrapper .grid-main-meta .grid-meta-status {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .products.collection-content-wrapper .product-scarcity {
@@ -25146,7 +25155,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .ProductItem.on-sale .ProductItem-details .product-price .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .ProductItem .ProductItem-details {
@@ -25167,7 +25176,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
 }
 
 .ProductItem .ProductItem-details .product-scarcity {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .ProductItem .ProductItem-details .variant-option,
@@ -26151,7 +26160,7 @@ body:not(.tweak-transparent-header):not([data-menu-overlay-theme-switcher="true"
     }
 }
 
-@media screen and (min-width: 768px) and screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (screen) and (max-width: 767px) {
     .blog-basic-grid {
         grid-template-columns: repeat(1, minmax(0, 1fr))
     }
@@ -29029,7 +29038,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .on-sale .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .on-sale .original-price .sqs-money-native {
@@ -29037,7 +29046,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .on-sale .product-price .sqs-money-native {
-    color: #0ee4fb
+    color: #05386b
 }
 
 .original-price {
@@ -29047,7 +29056,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 
 .product-mark.sale {
     display: none;
-    color: #0ee4fb
+    color: #05386b
 }
 
 .product-restock-notification:not([hidden]) {
@@ -29574,7 +29583,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .heading-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29584,7 +29593,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .body-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29594,7 +29603,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .button-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     text-transform: none;
@@ -29614,7 +29623,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .announcement-bar-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-size: .9rem;
     font-weight: 300;
     font-style: normal;
@@ -29623,7 +29632,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .site-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29643,7 +29652,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .site-navigation-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29663,7 +29672,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .header-button-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 500;
     font-style: normal;
     letter-spacing: 0em;
@@ -29673,7 +29682,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-basic-grid-list-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29683,7 +29692,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-basic-grid-list-excerpt-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29703,7 +29712,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-single-column-list-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29713,7 +29722,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-single-column-list-excerpt-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29733,7 +29742,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-side-by-side-list-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29743,7 +29752,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-side-by-side-list-excerpt-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29763,7 +29772,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-alternating-side-by-side-list-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29773,7 +29782,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-alternating-side-by-side-list-excerpt-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29793,7 +29802,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-grid-masonry-list-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29803,7 +29812,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-grid-masonry-list-excerpt-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29823,7 +29832,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-item-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29843,7 +29852,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-item-author-profile-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29853,7 +29862,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .blog-item-pagination-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29863,7 +29872,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .portfolio-grid-basic-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29873,7 +29882,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .portfolio-grid-overlay-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29883,7 +29892,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .portfolio-index-background-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29893,7 +29902,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .portfolio-hover-follow-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29903,7 +29912,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .portfolio-hover-static-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29913,7 +29922,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .portfolio-item-pagination-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29923,7 +29932,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .product-basic-item-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29933,7 +29942,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .product-basic-item-price-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -29943,7 +29952,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .product-basic-item-description-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -29973,7 +29982,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .product-grid-text-below-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -30013,7 +30022,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .events-item-pagination-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -30033,7 +30042,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .content-link-block-title-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30053,7 +30062,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .menu-block-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -30063,7 +30072,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .menu-block-item-title-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -30073,7 +30082,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .menu-block-item-description-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30083,7 +30092,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .menu-block-item-price-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30093,7 +30102,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-title-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30103,7 +30112,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-description-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30113,7 +30122,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-caption-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30123,7 +30132,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-placeholder-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30133,7 +30142,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-option-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30143,7 +30152,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-survey-title-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30153,7 +30162,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-select-dropdown-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30163,7 +30172,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .form-block-button-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30173,7 +30182,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .newsletter-block-title-text-font {
-    font-family: ibm-plex-mono;
+    /*font-family: ibm-plex-mono;*/
     font-weight: 400;
     font-style: normal;
     letter-spacing: -.04em;
@@ -30183,7 +30192,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .newsletter-block-description-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30193,7 +30202,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .newsletter-block-field-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30202,7 +30211,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .newsletter-block-button-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30211,7 +30220,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .newsletter-block-footnote-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30221,7 +30230,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .quote-block-text-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-weight: 300;
     font-style: normal;
     letter-spacing: .01em;
@@ -30241,7 +30250,7 @@ _:-ms-fullscreen .tweak-global-animations-animation-type-flex [data-animation-ro
 }
 
 .announcement-bar-font {
-    font-family: adelle-sans;
+    /*font-family: adelle-sans;*/
     font-size: .9rem;
     font-weight: 300;
     font-style: normal;
